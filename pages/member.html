@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   </head>
   <body>
-    <%- include('./layout/header'); -%>  
+    <%- include('./layout/header'); -%>
+
     <main class="bg-main">
       <div class="container distance-py-80">
         <div class="row justify-content-center">
@@ -42,7 +43,154 @@
             </ul>
             <!-- 內容 -->
             <div class="tab-content p-5 shadow rounded-style" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab" tabindex="0">個人資料</div>
+              <!-- 個人資料內容 -->
+              <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab" tabindex="0">
+                <!-- 個人資料表單 -->
+                <form>                  
+                  <div class="d-flex border-bottom pb-5 mb-5">
+                    <!-- 左邊表格 -->
+                    <div class="form-header flex-shrink-0 gap-4">
+                      <h2 class="fs-4 mb-3">個人資料</h2>
+                    </div>
+                    <!-- 右邊表格 -->
+                    <div class="w-100">
+                      <!-- 更新頭貼 -->
+                      <div class="mb-4">
+                        <div class="d-flex align-items-end">
+                          <!-- 頭貼 -->
+                          <img src="/assets/images/avatar.png" class="avatar rounded-circle me-3" alt="頭貼">
+                          <!-- 更新頭貼 -->
+                          <div>
+                            <label for="update-photo" class="btn border">
+                              <span class="material-icons-outlined align-bottom me-1">
+                                file_upload
+                              </span>
+                              更新頭貼                          
+                            </label>
+                            <input type="file" id="update-photo" name="update-photo" class="d-none">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 姓名 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="name" placeholder="Mokumaru" value="Mokumaru">
+                          <label for="name">姓名</label>
+                        </div>
+                      </div>
+                      <!-- 性別 -->
+                      <div class="mb-4">
+                        <p class="mb-2">性別</p>
+                        <div class="px-2">
+                          <div class="form-check form-check-inline me-4 mb-8">
+                            <input class="form-check-input" type="radio" name="sex" id="woman" value="woman" checked>
+                            <label class="form-check-label" for="woman">女性</label>
+                          </div>                        
+                          <div class="form-check form-check-inline me-4 mb-8">
+                            <input class="form-check-input" type="radio" name="sex" id="man" value="man">
+                            <label class="form-check-label" for="man">男性</label>
+                          </div>
+                          <div class="form-check form-check-inline me-4 mb-8">
+                            <input class="form-check-input" type="radio" name="sex" id="unwilling-disclose" value="unwilling-disclose">
+                            <label class="form-check-label" for="unwilling-disclose">不願透露</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 生日 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="birthday" placeholder="2000/01/10" value="2000/01/10">
+                          <label for="birthday">生日</label>
+                        </div>
+                      </div>
+                      <!-- 密碼 -->
+                      <div class="mb-4">
+                        <p class="mb-2">密碼</p>
+                        <!-- 修改密碼按鈕 -->
+                        <button type="button" class="btn border" data-bs-toggle="modal" data-bs-target="#change-password">
+                          修改密碼
+                          <span class="material-icons-outlined ms-1 align-bottom">
+                          chevron_right
+                          </span>
+                        </button>
+                        <!-- 修改密碼內容 -->
+                        <div class="modal fade" id="change-password" tabindex="-1" aria-labelledby="update-password" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title fs-5" id="update-password">更新密碼</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <!-- 新密碼 -->
+                                <div class="mb-4">
+                                  <input class="form-control" type="password" placeholder="新密碼" aria-label="default input example">
+                                </div>
+                                <!-- 再次密碼 -->
+                                <div>
+                                  <input class="form-control" type="password" placeholder="再次密碼" aria-label="default input example">
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-dark">
+                                  更新密碼
+                                  <span class="material-icons-outlined align-bottom ms-1">
+                                    chevron_right
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 信箱 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="email" class="form-control" id="email" placeholder="mokumaru@mail.com" value="mokumaru@mail.com">
+                          <label for="email">信箱</label>
+                        </div>
+                        <p class="form-text ms-2">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+                      </div>
+                      <!-- 聯絡電話 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="tel" class="form-control" id="contact" placeholder="09-1234-5678" value="09-1234-5678">
+                          <label for="contact">聯絡電話</label>
+                        </div>
+                      </div>
+                      <!-- 通訊地址 -->
+                      <div>
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="address" placeholder="高雄市三民區九如一路87號" value="高雄市三民區九如一路87號">
+                          <label for="address">通訊地址</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- 重新填寫 & 儲存更新 -->
+                <div class="d-flex justify-content-center">
+                  <!-- 匯出PDF -->
+                  <div class="me-4">
+                    <button class="btn border">
+                      重新填寫
+                      <span class="material-icons-outlined align-bottom ms-1">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                  <!-- 儲存更新 -->
+                  <div>
+                    <button class="btn btn-dark">
+                      儲存更新
+                      <span class="material-icons-outlined align-bottom ms-1">
+                        chevron_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 預約記錄內容 -->
               <div class="tab-pane fade" id="pills-log" role="tabpanel" aria-labelledby="pills-log-tab" tabindex="0">
                 <h2 class="fs-4 mb-4">預約紀錄</h2>
                 <!-- 三欄預約紀錄 -->
@@ -145,8 +293,9 @@
                   </tbody>
                 </table>
               </div>
+              <!-- 職旅計畫內容 -->
               <div class="tab-pane fade" id="pills-plan" role="tabpanel" aria-labelledby="pills-plan-tab" tabindex="0">
-                <!-- 表單 -->
+                <!-- 職旅計畫表單 -->
                 <form>                  
                   <!-- 職旅計劃概況 -->
                   <div class="d-flex border-bottom pb-5 mb-5">
@@ -555,7 +704,7 @@
                     </div>
                   </div>
                 </form>
-                <!-- 匯出 & 儲存 -->
+                <!-- 匯出PDF & 儲存更新 -->
                 <div class="d-flex justify-content-center">
                   <!-- 匯出PDF -->
                   <div class="me-4">
@@ -582,6 +731,7 @@
         </div>
       </div>
     </main>
+
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
   </body>

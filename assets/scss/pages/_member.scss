@@ -1,20 +1,25 @@
+// 背景色
 .bg-main {
     background-color: #f0f3f3;
 }
 
+// 距離
 .distance-py-80 {
     padding: 80px 0;
 }
 
+// 圓角風格
 .rounded-style {
     border-radius: 24px;
     background: #fff;
 }
 
+// 藍色字
 .text-blue {
     color: #4A69E8;
 }
 
+// 顯示狀態
 .state-display {
     font-size: 18px;
     color: #667F99;
@@ -23,4 +28,10 @@
 // 職旅計畫 | 表單
 .form-header {
     width: 300px;
+}
+
+// 頭貼
+.avatar {
+    width: 120px;
+    height: 120px;
 }
