@@ -1,4 +1,10 @@
+@import "bootstrap/scss/functions";
+
+@import "./variables-dark";
+@import "./variables";
+
 @import "bootstrap/scss/bootstrap.scss";
+
 @import "./base/base";
 @import './layout/header';
 @import './layout/footer';
