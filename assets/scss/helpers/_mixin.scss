@@ -1,0 +1,34 @@
+// 小型裝置（橫向手機，576px 以上）
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+// 中型設備（平板電腦，768px 以上）
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// 大型設備（桌上型電腦，992px 以上）
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// 超大型設備（大型桌面，1200px 以上）
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// XX-Large 設備（更大的桌面，1400px 以上）
+@mixin xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}

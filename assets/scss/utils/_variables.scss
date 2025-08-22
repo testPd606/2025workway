@@ -312,12 +312,6 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-// 設計規範色彩-Brand Colors
-$brand-colors-primary:    #4A69E8;
-$brand-colors-secondary:  #36C99F;
-$brand-colors-black:      #141A1F;
-$brand-colors-white:      #FCFCFD;
-
 // 設計規範色彩-Primary
 $primary-97:  #F1F4FD;
 $primary-90:  #D2D9F9;
@@ -338,20 +332,20 @@ $secondary:  $secondary-50;
 // 設計規範色彩-Alpha
 $alpha-60: rgba(20, 26, 31, 0.5);
 
-// 設計規範色彩-Global/success
-$global-success-90:  #DEFCCF;
-$global-success-40:  #47C20A;
-$global-success-30:  #369108;
+// 設計規範色彩-success
+$success-90:  #DEFCCF;
+$success-40:  #47C20A;
+$success-30:  #369108;
 
-// 設計規範色彩-Global/danger
-$global-danger-90:  #FFD0CC;
-$global-danger-70:  #FF7467;
-$global-danger-45:  #E51300;
+// 設計規範色彩-danger
+$danger-90:  #FFD0CC;
+$danger-70:  #FF7467;
+$danger-45:  #E51300;
 
-// 設計規範色彩-Global/warning
-$global-warning-90: #FFEACC;
-$global-warning-48: #F58F00;
-$global-warning-35: #B26800;
+// 設計規範色彩-warning
+$warning-90: #FFEACC;
+$warning-48: #F58F00;
+$warning-35: #B26800;
 
 // $primary:       $blue !default;
 // $secondary:     $gray-600 !default;
@@ -387,6 +381,18 @@ $theme-colors: (
   "natural-50":   $natural-50,
   "natural-30":   $natural-30,
   "natural-10":   $natural-10,
+  // 設計規範色彩-success
+  "success-90":   $success-90,
+  "success-40":   $success-40,
+  "success-30":   $success-30,
+  // 設計規範色彩-danger
+  "danger-90":  $danger-90,
+  "danger-70":  $danger-70,
+  "danger-45":  $danger-45,
+  // 設計規範色彩-warning
+  "warning-90": $warning-90,
+  "warning-48": $warning-48,
+  "warning-35": $warning-35,
 
   "primary":    $primary,
   "secondary":  $secondary,
@@ -757,6 +763,7 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.125 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * .875 !default;
 
 // scss-docs-end font-variables
 
@@ -767,7 +774,8 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1349,12 +1357,20 @@ $navbar-nav-link-padding-x:         .5rem !default;
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
-$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
-$navbar-brand-margin-end:           1rem !default;
+// $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+// $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
+// $navbar-brand-margin-end:           1rem !default;
+// 客製化設計稿行動版Brand
+$navbar-brand-height:               1 !default;
+$navbar-brand-padding-y:            .2625rem !default;
+$navbar-brand-margin-end:           0 !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
+// $navbar-toggler-padding-y:          .25rem !default;
+// $navbar-toggler-padding-x:          .75rem !default;
+// 客製化設計稿行動版選單距離
+$navbar-toggler-padding-y:          .375rem !default;
+$navbar-toggler-padding-x:          .187rem !default;
+
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
@@ -1366,7 +1382,10 @@ $navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1)
 $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3) !default;
 $navbar-light-icon-color:           rgba($body-color, .75) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15) !default;
+// $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15) !default;
+// 客製化設計稿行動版選單邊框透明
+$navbar-light-toggler-border-color: transparent !default;
+
 $navbar-light-brand-color:          $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:    $navbar-light-active-color !default;
 // scss-docs-end navbar-variables
@@ -1413,8 +1432,11 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 
 $dropdown-link-disabled-color:      var(--#{$prefix}tertiary-color) !default;
 
-$dropdown-item-padding-y:           $spacer * .25 !default;
-$dropdown-item-padding-x:           $spacer !default;
+// $dropdown-item-padding-y:           $spacer * .25 !default;
+// $dropdown-item-padding-x:           $spacer !default;
+// 客製化設計稿下拉選單按鈕邊距
+$dropdown-item-padding-y:           $spacer * 1.25 !default;
+$dropdown-item-padding-x:           $spacer * .75 !default;
 
 $dropdown-header-color:             $gray-600 !default;
 $dropdown-header-padding-x:         $dropdown-item-padding-x !default;

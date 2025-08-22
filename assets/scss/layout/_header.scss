@@ -1,3 +1,11 @@
+// Brand Logo
+.navbar-brand {
+  width: 92px;
+  @include sm {
+    width: 124px;
+  }
+}
+
 // 會員登入
 .menber-img {
   width: 44px;
