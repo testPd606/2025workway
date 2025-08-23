@@ -32,3 +32,11 @@
         @content;
     }
 }
+
+// forms 共用樣式
+@mixin formsStyle {
+    font-size: .875rem;
+    @include md {
+        font-size: 1rem;
+    }
+}

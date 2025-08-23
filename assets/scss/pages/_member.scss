@@ -1,12 +1,24 @@
 // 職旅計畫 | 表單
 .nav-btn-bg {
     .nav-link {
+        padding: 0.75rem;
         background-color: $white;
+        @include md {
+            font-size: 1rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
     }
 }
 
-.form-header {
-    width: 300px;
+// 表單主標題
+.form-title {
+    font-size: 1.25rem;
+}
+
+// 標籤
+.tabs-icon {
+    font-size: 1.25rem;
 }
 
 // 頭貼
