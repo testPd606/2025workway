@@ -1778,15 +1778,21 @@ $progress-bar-transition:           width .6s ease !default;
 
 // List group
 
-// scss-docs-start list-group-variables
+// scss-docs-start list-group-variable
 $list-group-color:                  var(--#{$prefix}body-color) !default;
 $list-group-bg:                     var(--#{$prefix}body-bg) !default;
 $list-group-border-color:           var(--#{$prefix}border-color) !default;
-$list-group-border-width:           var(--#{$prefix}border-width) !default;
-$list-group-border-radius:          var(--#{$prefix}border-radius) !default;
 
-$list-group-item-padding-y:         $spacer * .5 !default;
-$list-group-item-padding-x:         $spacer !default;
+// 客製化設計稿表單
+// $list-group-border-width:           var(--#{$prefix}border-width) !default;
+// $list-group-border-radius:          var(--#{$prefix}border-radius) !default;
+// $list-group-item-padding-y:         $spacer * .5 !default;
+// $list-group-item-padding-x:         $spacer !default;
+$list-group-border-width:           0 !default;
+$list-group-border-radius:          0 !default;
+
+$list-group-item-padding-y:         $spacer * .625 !default;
+$list-group-item-padding-x:         $spacer * .5 !default;
 // fusv-disable
 $list-group-item-bg-scale:          -80% !default; // Deprecated in v5.3.0
 $list-group-item-color-scale:       40% !default; // Deprecated in v5.3.0

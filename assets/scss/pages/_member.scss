@@ -16,13 +16,57 @@
     font-size: 1.25rem;
 }
 
+// 預約表單||行動版
+.recor-table {
+    font-size: .875rem;
+    .badge {
+        padding-top: .219rem;
+        padding-bottom: .219rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    li:nth-child(even) {
+        background-color: $natural-90;
+    }
+}
+
 // 標籤
 .tabs-icon {
     font-size: 1.25rem;
+}
+
+.tabs-menu {
+    .btn {
+        padding: .75rem;
+        @include md {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    }
 }
 
 // 頭貼
 .avatar {
     width: 120px;
     height: 120px;
+}
+
+// 下拉式選單
+.dropdown {
+    .btn {
+        padding: 0.625rem;
+        @include md {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            border: 1px solid $natural-85;
+        }
+    }
+    .dropdown-title {
+        display: none;
+        @include md {
+            display: inline-block;
+        }
+    }
 }

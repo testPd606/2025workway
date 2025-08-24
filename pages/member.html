@@ -47,7 +47,7 @@
               <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab" tabindex="0">
                 <!-- 個人資料表單 -->
                 <form>                  
-                  <div class="row row-cols-1 row-cols-md-2 mb-7 mb-md-6">
+                  <div class="row mb-7 mb-md-6">
                     <!-- 左邊表格 -->
                     <div class="col-md-4">
                       <h2 class="fs-md-4 mb-4 mb-md-3 form-title">個人資料</h2>
@@ -170,13 +170,13 @@
                 </form>
                 <!-- 重新填寫 & 儲存更新 -->
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                  <button class="btn btn-dark mb-4 mb-md-0 order-md-2">
+                  <button typee="button" class="btn btn-dark mb-4 mb-md-0 order-md-2">
                     儲存更新
                     <span class="material-icons-outlined align-bottom ms-1">
                       chevron_right
                     </span>
                   </button>
-                  <button class="btn border me-md-4">
+                  <button typee="button" class="btn border me-md-4">
                     重新填寫
                     <span class="material-icons-outlined align-bottom ms-1">
                       chevron_right
@@ -189,7 +189,7 @@
                 <h2 class="fs-4 mb-4">預約紀錄</h2>
                 <!-- 三欄預約紀錄 -->
                 <div class="d-flex gap-4 mb-5">
-                  <div class="card w-100">
+                  <div class="card w-100 d-none d-md-block">
                     <div class="card-body text-center py-4">
                       <h3 class="fs-2 fw-bold mb-2 text-primary">3</h3>
                       <p class="fs-5 text-natural-50">已完成諮詢</p>
@@ -201,7 +201,7 @@
                       <p class="fs-5 text-natural-50">即將到來</p>
                     </div>
                   </div>
-                  <div class="card w-100">
+                  <div class="card w-100 d-none d-md-block">
                     <div class="card-body text-center py-4">
                       <h3 class="fs-2 fw-bold mb-2 text-primary">3/6</h3>
                       <p class="fs-5 text-natural-50">使用方案進度</p>
@@ -211,16 +211,16 @@
                 <!-- 表單左右選單 -->
                 <div class="d-flex justify-content-between mb-4">
                   <!-- 左選單 -->
-                  <div>
+                  <div class="tabs-menu">
                     <button type="button" class="btn btn-dark me-2">全部預約</button>
                     <button type="button" class="btn btn-outline-dark border me-2">已完成</button>
                     <button type="button" class="btn btn-outline-dark border">已取消</button>
                   </div>
                   <!-- 右選單 -->
                   <div class="dropdown">
-                    <button class="btn border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      排序
-                      <span class="material-icons-outlined align-bottom ms-1">
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="dropdown-title">排序</span>
+                      <span class="material-icons-outlined align-bottom ms-md-1">
                       filter_list
                       </span>
                     </button>
@@ -230,8 +230,8 @@
                     </ul>
                   </div>
                 </div>
-                <!-- 表格 -->
-                <table class="table table-striped table-hover">
+                <!-- 表格||桌機版 -->
+                <table class="table table-striped table-hover d-none d-md-table">
                   <thead>
                     <tr>
                       <th scope="col">諮詢方案</th>
@@ -286,15 +286,109 @@
                     </tr>
                   </tbody>
                 </table>
+                <!-- 表格||行動版 -->
+                <ul class="list-group recor-table d-md-none d-block">
+                  <li class="list-group-item">
+                    <p class="fw-medium border-bottom bborder-$natural-85 pb-3 mb-3">預約紀錄一覽</p>
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="d-flex align-centter justify-content-between mb-5">
+                      <h6 class="fs-6">
+                        職涯定位-職涯探索包 | 6/6堂
+                      </h6>
+                      <div class="badge rounded-pill border bg-white fs-7 align-middle">
+                        視訊
+                      </div>
+                    </div>
+                    <div class="d-flex align-centter mb-5 text-natural-50"> 
+                      <p class="me-3">時間：<time>2025/11/11</time></p>
+                      <p>時長:<time>60分鐘</time></p>
+                    </div>
+                    <p class="text-natural-50">等待上課</p>
+                  </li>                  
+                </ul>
               </div>
               <!-- 職旅計畫內容 -->
               <div class="tab-pane fade" id="pills-plan" role="tabpanel" aria-labelledby="pills-plan-tab" tabindex="0">
                 <!-- 職旅計畫表單 -->
                 <form>                  
                   <!-- 職旅計劃概況 -->
-                  <div class="d-flex border-bottom pb-5 mb-5">
+                  <div class="row border-bottom pb-5 mb-5">
                     <!-- 左邊表格 -->
-                    <div class="form-header flex-shrink-0 gap-4">
+                    <div class="col-md-4">
                       <h2 class="fs-4 mb-3">職旅計劃概況</h2>
                       <p class="text-natural-50">
                         欄位皆為
@@ -302,7 +396,7 @@
                       </p>
                     </div>
                     <!-- 右邊表格 -->
-                    <div class="w-100">
+                    <div class="col-md-8">
                       <!-- 目前職業狀態 -->
                       <div class="mb-5">
                         <p class="mb-2">目前職業狀態</p>
@@ -429,9 +523,9 @@
                     </div>
                   </div>
                   <!-- 職涯規劃 -->
-                  <div class="d-flex border-bottom pb-5 mb-5">
+                  <div class="row border-bottom pb-5 mb-5">
                     <!-- 左邊表格 -->
-                    <div class="form-header flex-shrink-0 gap-4">
+                    <div class="col-md-4">
                       <h2 class="fs-4 mb-3">職涯規劃</h2>
                       <p class="text-natural-50">
                         欄位皆為
@@ -439,7 +533,7 @@
                       </p>
                     </div>
                     <!-- 右邊表格 -->
-                    <div class="w-100">
+                    <div class="col-md-8">
                       <!-- 1 年短期職涯目標 -->
                       <div class="mb-5">
                         <div class="form-floating">
@@ -584,16 +678,16 @@
                     </div>
                   </div>
                   <!-- 專業技能區塊 -->
-                  <div class="d-flex border-bottom pb-5 mb-5">
+                  <div class="row border-bottom pb-5 mb-5">
                     <!-- 左邊表格 -->
-                    <div class="form-header flex-shrink-0 gap-4">
+                    <div class="col-md-4">
                       <h2 class="fs-4 mb-3">專業技能區塊</h2>
                       <p class="text-natural-50">
                         欄位皆為選填 
                       </p>
                     </div>
                     <!-- 右邊表格 -->
-                    <div class="w-100">
+                    <div class="col-md-8">
                       <!-- 核心專業領域 -->
                       <div class="mb-5">
                         <p class="mb-2">核心專業領域</p>
@@ -671,16 +765,16 @@
                     </div>
                   </div>                  
                   <!-- 教育背景 -->
-                  <div class="d-flex mb-5">
+                  <div class="row mb-5">
                     <!-- 左邊表格 -->
-                    <div class="form-header flex-shrink-0 gap-4">
+                    <div class="col-md-4">
                       <h2 class="fs-4 mb-3">教育背景</h2>
                       <p class="text-natural-50">
                         欄位皆為選填 
                       </p>
                     </div>
                     <!-- 右邊表格 -->
-                    <div class="w-100">
+                    <div class="col-md-8">
                       <!-- 學歷背景 -->
                       <div class="mb-5">
                         <div class="form-floating">
@@ -699,25 +793,21 @@
                   </div>
                 </form>
                 <!-- 匯出PDF & 儲存更新 -->
-                <div class="d-flex justify-content-center">
-                  <!-- 匯出PDF -->
-                  <div class="me-4">
-                    <button class="btn border">
-                      匯出 PDF
-                      <span class="material-icons-outlined align-bottom ms-1">
-                        chevron_right
-                      </span>
-                    </button>
-                  </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                   <!-- 儲存更新 -->
-                  <div>
-                    <button class="btn btn-dark">
-                      儲存更新
-                      <span class="material-icons-outlined align-bottom ms-1">
-                        chevron_right
-                      </span>
-                    </button>
-                  </div>
+                  <button type="button" class="btn btn-dark">
+                    儲存更新
+                    <span class="material-icons-outlined align-bottom ms-1">
+                      chevron_right
+                    </span>
+                  </button>
+                  <!-- 匯出PDF --> 
+                  <button type="button" class="btn border me-md-4 order-md-1">
+                    匯出 PDF
+                    <span class="material-icons-outlined align-bottom ms-1">
+                      chevron_right
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
